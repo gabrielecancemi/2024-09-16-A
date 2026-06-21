@@ -22,6 +22,7 @@ class Model:
 
     def make_graph(self, lat, lon, shape):
         self._grafo.clear()
+        self._id_stati = {}
         nodi = DAO.get_nodi(lat, lon, shape)
         self._grafo.add_nodes_from(nodi)
         for n in nodi:
